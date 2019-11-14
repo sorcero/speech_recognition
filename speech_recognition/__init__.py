@@ -953,9 +953,7 @@ class Recognizer(AudioSource):
             'language_code': language
         }
         if preferred_phrases is not None:
-            config['speechContexts'] = [types.SpeechContext(
-                phrases=preferred_phrases
-            )]
+            config['speech_contexts'] = [{"phrases": preferred_phrases}]
         if show_all:
             config['enableWordTimeOffsets'] = True  # some useful extra options for when we want all the output
 
